@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAR Provisions | Process Guide</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <div class="container">
+      <header class="topbar" aria-label="Page header">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">NAR</div>
+          <div>
+            <div>NAR Provisions</div>
+            <small>Process Guide</small>
+          </div>
+        </div>
+        <div class="pill">Meetings • Deadlines • Claims Checklist</div>
+      </header>
+
+      <section class="hero" aria-label="Process guide introduction">
+        <div class="hero-copy">
+          <div class="eyebrow">✦ Interactive guide</div>
+          <h1>Process Guide</h1>
+          <p>Explore the provisions process, understand key meetings and review the minimum supportive documentation by claim type.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-tab-target="process">Explore process →</button>
+            <button class="btn btn-secondary" data-tab-target="claims">View claims checklist</button>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Key deadlines summary">
+          <div>
+            <h2>Key deadlines at a glance</h2>
+            <div class="deadline-list">
+              <div class="deadline-item">
+                <strong>Tuesday 12:00 PM</strong>
+                <span>Pre-Alignment agenda closes</span>
+              </div>
+              <div class="deadline-item">
+                <strong>Friday 12:00 PM</strong>
+                <span>COM agenda closes</span>
+              </div>
+              <div class="deadline-item">
+                <strong>Monday 10:00 AM</strong>
+                <span>Deadline for final COM presentations</span>
+              </div>
+            </div>
+          </div>
+          <p class="hero-note">First version based on the current provisions and claims checklist screenshots.</p>
+        </aside>
+      </section>
+
+      <section class="main-panel" aria-label="Interactive process guide content">
+        <nav class="nav-tabs" aria-label="Guide navigation">
+          <button class="tab-button active" data-tab="overview">Overview</button>
+          <button class="tab-button" data-tab="process">Provisions Process</button>
+          <button class="tab-button" data-tab="claims">Claims Checklist</button>
+        </nav>
+
+        <div class="content-area">
+          <section class="view active" id="overview">
+            <div class="section-header">
+              <div>
+                <h2>Choose your path</h2>
+                <p>Start with the meeting flow if you need to understand the process, or open the checklist if you already know your claim type.</p>
+              </div>
+            </div>
+
+            <div class="route-grid">
+              <button class="route-card" data-tab-target="process">
+                <div class="icon">⌁</div>
+                <h3>Provisions Process</h3>
+                <p>Review the meeting sequence, agenda rules and deadlines for Pre-Alignment, COM and monthly releases.</p>
+              </button>
+              <button class="route-card" data-tab-target="claims">
+                <div class="icon">☑</div>
+                <h3>Claims Checklist</h3>
+                <p>Select the claim type and review the minimum supportive documentation needed before submission.</p>
+              </button>
+            </div>
+          </section>
+
+          <section class="view" id="process">
+            <div class="section-header">
+              <div>
+                <h2>Provisions Process</h2>
+                <p>A simplified view of the claims presentation process for provisions, organized by meeting type, timing and requirements.</p>
+              </div>
+            </div>
+
+            <div class="timeline">
+              <article class="step-card">
+                <div class="step-number">01</div>
+                <div>
+                  <span class="step-meta">Wednesday 11:00 AM</span>
+                  <h3>Pre-Alignment</h3>
+                  <ul class="check-list">
+                    <li>Deadline: Tuesday 12:00 PM.</li>
+                    <li>Only Provisions Coordinators submit topics.</li>
+                    <li>Official templates are mandatory.</li>
+                    <li>Complete overview chart is required.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="step-card">
+                <div class="step-number">02</div>
+                <div>
+                  <span class="step-meta">Tuesday 10:30 AM</span>
+                  <h3>COM Meeting</h3>
+                  <ul class="check-list">
+                    <li>Only pre-aligned topics go to COM.</li>
+                    <li>Buyer presents in COM following Tuesday.</li>
+                    <li>Exception: Global Risk Management topics.</li>
+                    <li>COM agenda closes Friday 12:00 PM.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="step-card">
+                <div class="step-number">03</div>
+                <div>
+                  <span class="step-meta">Once a month</span>
+                  <h3>Sustainable Effects Release with Till</h3>
+                  <ul class="check-list">
+                    <li>Only price increase topics.</li>
+                    <li>Agenda closes Thursday previous to the meeting.</li>
+                    <li>Friday 12:00 PM deadline to receive presentation.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <aside class="deadline-panel" aria-label="Important deadlines">
+              <h3>Agenda and presentation deadlines</h3>
+              <div class="deadline-grid">
+                <div class="deadline-chip"><strong>Tuesday 12 PM</strong>Pre-Alignment agenda closes</div>
+                <div class="deadline-chip"><strong>Friday 12 PM</strong>COM agenda closes</div>
+                <div class="deadline-chip"><strong>Monday 10 AM</strong>Deadline for final COM presentations</div>
+              </div>
+            </aside>
+          </section>
+
+          <section class="view" id="claims">
+            <div id="claims-home">
+              <div class="section-header">
+                <div>
+                  <h2>Claims Checklist</h2>
+                  <p>The type of claim determines what supportive documentation is needed. Select a claim to view the current minimum requirements.</p>
+                </div>
+              </div>
+              <div class="claims-grid" id="claimsGrid"></div>
+              <div class="note"><strong>Note:</strong> This is the first version of the checklist. More claim types can be added later without changing the overall structure.</div>
+            </div>
+
+            <div class="claim-detail" id="claimDetail" aria-live="polite"></div>
+          </section>
+        </div>
+      </section>
+
+      <p class="footer-note">NAR Provisions | Interactive Process Guide | First version</p>
+    </div>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
